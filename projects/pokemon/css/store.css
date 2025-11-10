@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+/* HEADER */
+
+
+/* LOGO IMAGE */
+.logo img{
+    max-width: 190px;
+    height: auto;
+}
+
+.logo img:hover {
+    transition: all .42s ease;
+    transform: scale(1.1);
+    cursor: default;
+}
+/* LOGO IMAGE */
+
+/* NAVMENU BAR*/
+.navmenu {
+    display: flex;
+}
+
+/* NAVMENU lists*/
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+.navmenu li {
+    list-style: none;
+}
+
+.navmenu li:hover {
+    transition: all .42s ease;
+    transform: scale(1.3);
+}
+
+.navmenu a:hover {
+    transition: all .42s ease;
+    color: rgb(38, 63, 133);
+}
+
+.navmenu li #Active {
+    color: #EE1C47;
+}
+/* NAVMENU ICONS*/
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.3);
+    color: rgb(38, 63, 133);
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+/* NAVMENU BAR END*/
+
+/* SECTION*/
+section {
+    padding: 5% 10%;
+}
+
+.main-home {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/bg6.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+}
+
+.main-text{
+    width: fit-content;
+    background-color: #FFFFFF;
+    backdrop-filter: blur(5px);
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.main-text h5 {
+    color: #EE1C47;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 15px;
+    
+}
+
+.main-text h1 {
+    color: #000;
+    font-size: 65px;
+    text-transform: capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+
+.main-text p {
+    color: #333c56;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.main-btn {
+    display: inline-block;
+    color: white;
+    background-color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;
+}
+
+.main-btn:hover {
+    color: #2c2c2c;
+    background-color: white;
+}
+
+.main-btn i {
+    vertical-align: middle;
+}
+
+/* down arrow */
+.down-arrow {
+    position: absolute;
+    top: 85%;
+    left: 48%;
+}
+
+.down i {
+    font-size: 30px;
+    color: #2c2c2c;
+    border: 2px solid #2c2c2c;
+    border-radius: 50px;
+    padding: 12px 12px;
+}
+
+.down i:hover {
+    background-color: #2c2c2c;
+    color: white;
+    transition: all .42s ease;
+}
+
+/* HEADER STICKY */
+header.sticky {
+    background-color: #FFFFFF;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+/* PRODUCT SECTION*/
+.products-section {
+    align-items: center;
+    justify-content: center;
+}
+.center-text h2 {
+    color: #2c2c2c;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ingame {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 2rem;
+}
+
+.row {
+    position: relative;
+    transition: all .40s;
+}
+
+.row img {
+    width: 100%;
+    padding: 25%;
+    height: auto;
+    transition: all .40s;
+    border: 2px solid;
+}
+
+.row img:hover {
+    transform: scale(0.9);
+    height: auto;
+    transition: all .40s;
+    cursor: pointer;
+}
+
+.product-text h5 {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #27b737;
+    padding: 3px 10px;
+    border-radius: 2px;
+}
+
+.heart-icon {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+
+.heart-icon:hover {
+    color: #EE1C47;
+    cursor: pointer;
+}
+
+.rating i{
+    color: #ffc400;
+    font-size: 18px;
+}
+
+.price h4 {
+    color: #111;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.price p{
+    color: #2c2c2c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* CONTACT SECTION */
+
+section.contact {
+    background-color: #c2c2c29d;
+}
+
+.contact img {
+    height: auto;
+    width: 150px;
+}
+
+section.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    gap: 3rem;
+}
+
+.contact-info h4 {
+    color: #2c2c2c;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    background: #000000;
+    color: #fff; 
+    padding: 2px; 
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    text-align: center;
+}
+
+/* RESPONSIVENESS */
+@media (max-width:890px){
+    header{
+        padding: 2px 3%;
+        transition: .4s;
+    }
+    
+}
+
+@media (max-width:630px){
+    .main-text h1{
+        font-size: 50px;
+        transition: .4s;
+    }
+    .main-text p{
+        font-size: 18px;
+        transition: .4s;
+    }
+    .main-btn{
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}
+
+@media (max-width:750px){
+    .navmenu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: fit-content;
+        background: #3f5d8a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+        background-color: #2c2c2c;
+        border-radius: 50px;
+    }
+    .navmenu a{
+        display: block;
+        margin: 18px 0;
+        color: white;
+    }
+    .navmenu a:hover{
+        display: block;
+        margin: 18px 0;
+        color: #ffc400;
+    }
+    .navmenu li{
+        color: white;
+    }
+    .navmenu.open {
+        right: 0;
+    }
+}

@@ -1,0 +1,124 @@
+.box {
+    position: fixed;
+    display: flex;
+    width: 300px;
+    height: 300px;
+    top: -200px;
+    bottom: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 2s ease;
+    z-index: 1;
+}
+
+.box-up {
+    animation: box-up 1s forwards;
+}
+
+.box-down {
+    animation: box-down 2s forwards;
+}
+
+@keyframes box-up {
+    to {
+        top: 250px;
+    }
+}
+
+@keyframes box-down {
+    from{
+    top:8px;
+    }
+    to {
+        top: -780px;
+    }
+}
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    background-color: #b19bd9;
+  }
+
+.button-container {
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 200px;
+    position: fixed;
+}
+
+.button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform : scale(1.2);
+}
+
+#monday-button{
+    background-color: #8e44ad;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+#tuesday-button{
+    background-color: #27ae60;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+#wednesday-button{
+    background-color: #f1c40f;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+#thursday-button{
+    background-color: #e67e22;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+#friday-button{
+    background-color: #e74c3c;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+#saturday-button{
+    background-color: #567de9;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+#sunday-button{
+    background-color: #024a5c;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.box-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+

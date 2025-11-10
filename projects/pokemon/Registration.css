@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+body{
+    min-height: 90vh;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    margin-top: 50px;
+    background-image: url(imgs/bg6.png);
+    background-position: center;
+    background-size: cover;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+/* HEADER */
+
+
+/* LOGO IMAGE */
+.logo img{
+    max-width: 190px;
+    height: auto;
+}
+
+.logo img:hover {
+    transition: all .42s ease;
+    transform: scale(1.1);
+    cursor: default;
+}
+/* LOGO IMAGE */
+
+/* NAVMENU BAR*/
+.navmenu {
+    display: flex;
+}
+
+/* NAVMENU lists*/
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+.navmenu li {
+    list-style: none;
+}
+
+.navmenu li:hover {
+    transition: all .42s ease;
+    transform: scale(1.3);
+}
+
+.navmenu a:hover {
+    transition: all .42s ease;
+    color: rgb(38, 63, 133);
+}
+
+.navmenu li #Active {
+    color: #EE1C47;
+}
+/* NAVMENU ICONS*/
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.3);
+    color: rgb(38, 63, 133);
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+/* NAVMENU BAR END*/
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    background: #000000;
+    color: #fff; 
+    padding: 2px; 
+    text-align: center;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-content h3{
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    text-align: center;
+}
+
+/* REGISTER FORM */
+
+#registrationFormContainer {
+    align-items: center;
+    justify-content: center;
+}
+
+.peeking-image img{
+    width: 100px;
+    height: 100px; 
+    margin-top: -90px;
+    margin-left: 130px;
+}
+
+h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+  .containerreg {
+    position: center;
+    width: 400px;
+    background-color: #9bbbea;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #000;
+    background-image: url(imgs/pokemon.jpg);
+    background-size:cover;
+  }
+  
+  .form-group {
+    margin-bottom: 30px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #050873;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: rgb(244, 244, 159);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e1f95b;
+  }
+  
+  /* Profile Content Styling */
+
+#userInfoContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #userInfoContainer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #userInfoContainer p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ffcccc;
+    border-radius: 10px;
+    color: #ff4d4d;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #userInfoContainer a {
+    color: #0066ff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  #userInfoContainer a:hover {
+    color: #004080;
+  }
+  #loginInfoContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #loginInfoContainer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #loginInfoContainer p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ffcccc;
+    border-radius: 10px;
+    color: #ff4d4d;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #loginInfoContainer a {
+    color: #0066ff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  #loginInfoContainer a:hover {
+    color: #004080;
+  }
+
+  #loginFormContainer {
+    display: none;
+    margin: auto;  
+    width: 400px;  
+    background-color: #9bbbea;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #000;
+    background-image: url(imgs/pokemon.jpg);
+    background-size: cover;
+}
+  
+/* RESPONSIVENESS */
+
+@media (max-width:750px){
+  .navmenu{
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      width: 300px;
+      height: fit-content;
+      background: #3f5d8a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 30px;
+      transition: all .42s;
+      background-color: #2c2c2c;
+      border-radius: 50px;
+  }
+  .navmenu a{
+      display: block;
+      margin: 18px 0;
+      color: white;
+  }
+  .navmenu a:hover{
+      display: block;
+      margin: 18px 0;
+      color: #ffc400;
+  }
+  .navmenu li{
+      color: white;
+  }
+  .navmenu.open {
+      right: 0;
+  }
+}

@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+ 
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Ven Lightstick</title>
+<!-- Bootstrap css-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/22312c5dd2.js" crossorigin="anonymous"></script>
+<!--css-->
+<style>
+
+body {
+font-family: "Montserrat";
+}
+.container-fluid {
+padding: 3% 15% 7%;
+}
+/* Title Section */
+#title {
+background-color: #800080;
+color: #c37eeb;
+}
+
+.title-heading {
+font-family: "Montserrat";
+font-size: 3rem;
+line-height: 1.5;
+font-weight: 600;
+}
+
+.title-span {
+font-family: 'Dancing Script', cursive;
+letter-spacing: 2px;
+}
+
+.title-image {
+position: absolute;
+width: 85%;
+height: 100%;
+right: 0;
+}
+/* Navigation Bar */
+.navbar {
+padding: 0 0 4rem;
+}
+
+.navbar-brand {
+font-family: "Ubuntu";
+font-size: 2.5rem;
+font-weight: 900;
+}
+
+.nav-item {
+padding: 0 18px;
+}
+
+.nav-link {
+font-size: 1.2rem;
+font-family: "Montserrat-light";
+}
+/* Title Button */
+.title-button {
+margin: 5% 3% 5% 0;
+}
+/* login dialog box */
+.modal-content {
+color: gray;
+}
+
+.modal-header {
+margin-left: 34%;
+}
+/* Feature Section */
+.feature {
+background-color: #ffffff;
+}
+
+.feature-box{
+text-align: center;
+padding: 5% 3%;
+}
+
+.feature-para, .products-para, .card-text, .contact-para {
+color: #8f8f8f;
+}
+
+.icon {
+color: #ef8172;
+padding: 1rem;
+}
+
+.icon:hover {
+color: #ff4c68;
+}
+/* Feature Products */
+#products {
+text-align: center;
+background-color: #EFEFEF;
+padding-top: 3%;
+}
+
+.products-card {
+padding: 3% 7% 3% 7%;
+}
+
+.card-img-top {
+height: 200px;
+}
+
+.products-title, .contact-title {
+color: #ff4c68;
+letter-spacing: 1px;
+}
+/* Testimonials */
+#testimonials {
+text-align: center;
+background-color: #ef8172;
+color: #fff;
+}
+
+.carousel-item {
+padding: 3% 15%;
+}
+
+.testimonial-image {
+width: 15%;
+border-radius: 100%;
+margin: 20px;
+}
+/* Press */
+#press {
+background-color: #ef8172;
+text-align: center;
+padding-bottom: 3%;
+}
+
+.press-logo {
+width: 15%;
+margin: 10px 20px 10px;
+padding: 15px;
+}
+/* Contact */
+#contact{
+text-align: center;
+background-color: #EFEFEF;
+padding: 3% 15%;
+}
+
+.form-content{
+position: relative;
+width: 50%;
+left: 25%;
+}
+
+#footer {
+margin-top: 3%;
+text-align: center;
+}
+
+.footer-logo {
+padding: 10px 12px;
+}
+
+.footer-para {
+margin: 10px 0 0 0;
+}
+
+.footer-logo {
+color: #ef8172;
+}
+
+.footer-logo:hover {
+color: #ff4c68;
+}
+
+.btnCard {
+background: #3498db;
+background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+background-image: -o-linear-gradient(top, #3498db, #2980b9);
+background-image: linear-gradient(to bottom, #3498db, #2980b9);
+-webkit-border-radius: 28;
+-moz-border-radius: 28;
+border-radius: 28px;
+font-family: Arial;
+color: #ffffff;
+font-size: 20px;
+padding: 10px 20px 10px 20px;
+text-decoration: none;
+}
+
+.btnCard:hover {
+background: #3cb0fd;
+background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+text-decoration: none;
+}
+
+@media (max-width: 1028px){
+body {
+text-align: center;
+}
+
+.title-heading {
+text-align: center;
+}
+
+.title-image {
+visibility: hidden;
+}
+
+.products-card {
+margin: 0 20% 20% 0;
+}
+}
+</style>
+</head>
+
+<body>
+<!-- Title -->
+<section id="title">
+
+<div class="container-fluid">
+
+ 
+
+<!-- navigation bar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<a class="navbar-brand" href="#">Ven Sell</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ml-auto">
+
+<li class="nav-item active">
+
+<a class="nav-link" href="#title">Home</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="#products">Products</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="#contact">Contact</a>
+
+</li>
+
+<li class="nav-item">
+
+<a class="nav-link" href="">My Account</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+ 
+
+<!-- title -->
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<h1 class="title-heading"><span class="title-span">Choose what you</span> LOVE <3.</h1>
+
+<!-- Sign In and Sign Up Buttons -->
+
+<button type="button" class="btn btn-outline-light btn-lg title-button" data-toggle="modal" data-target="#signIn" data-whatever="@mdo"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+
+ 
+
+<div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal-dialog" role="document">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title" id="exampleModalLabel">Login Form</h5>
+
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+<span aria-hidden="true">&times;</span>
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<form>
+
+<div class="form-group">
+
+<label for="recipient-name" class="col-form-label">Username or Email:</label>
+
+<input type="text" class="form-control" id="recipient-name">
+
+</div>
+
+<div class="form-group">
+
+<label for="password-text" class="col-form-label">Password:</label>
+
+<input type="password" class="form-control" id="password-text">
+
+</div>
+
+</form>
+
+</div>
+
+<div class="modal-footer">
+
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+<button type="button" class="btn btn-primary">Login</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+ 
+
+<button type="button" class="btn btn-dark btn-lg title-button" data-toggle="modal" data-target="#signUp" data-whatever="@mdo"><i class="fas fa-user-plus"></i> Sign Up</button>
+
+ 
+
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal-dialog" role="document">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title" id="exampleModalLabel">Create Account</h5>
+
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+<span aria-hidden="true">&times;</span>
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<form>
+
+<div class="form-group">
+
+<label for="email-name" class="col-form-label">Email:</label>
+
+<input type="text" class="form-control" id="email-name">
+
+</div>
+
+<div class="form-group">
+
+<label for="username-name" class="col-form-label">Username:</label>
+
+<input type="text" class="form-control" id="username-name">
+
+</div>
+
+<div class="form-group">
+
+<label for="password-text" class="col-form-label">Password:</label>
+
+<input type="password" class="form-control" id="password-text">
+
+</div>
+
+<div class="form-group">
+
+<label for="confirm-password-text" class="col-form-label">Confirm Password:</label>
+
+<input type="password" class="form-control" id="confirm-password-text">
+
+</div>
+
+</form>
+
+</div>
+
+<div class="modal-footer">
+
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+<button type="button" class="btn btn-primary">Sign Up</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div> <!-- login and sign up -->
+
+ 
+
+</div>
+
+ 
+
+<div class="col-lg-6">
+
+<!-- <i class="fas fa-home fa-10x title-image"></i> -->
+
+<img src="https://file3.instiz.net/data/file3/2018/11/12/0/e/c/0ecc62c184ad9cca71c81fd4da427642.gif" alt="gif">
+
+</div>
+
+</div>
+
+ 
+
+</div>
+
+</section>
+
+ 
+
+<!-- features -->
+
+ 
+
+<section id="features">
+
+<div class="row">
+
+<div class="feature-box col-lg-4">
+
+<i class="icon fas fa-dollar-sign fa-3x"></i>
+
+<h3>Merchandise</h3>
+
+<p class="feature-para">Get your favorite kpop merch.</p>
+
+</div>
+
+<div class="feature-box col-lg-4">
+
+<i class="icon fas fa-exchange-alt fa-3x"></i>
+
+<h3>Easy to return.</h3>
+
+<p class="feature-para">You can return it within 7 days, under return policy.</p>
+
+</div>
+
+<div class="feature-box col-lg-4">
+
+<i class="icon fas fa-phone-volume fa-3x"></i>
+
+<h3>Online Support.</h3>
+
+<p class="feature-para">Get 24/7 support system.</p>
+
+</div>
+
+ 
+
+</div>
+
+</section>
+
+ 
+
+<!-- Feature Products -->
+
+ 
+
+<section id="products">
+
+<h3><span class = "products-title">Featured</span>Products</h3>
+
+<p class = "products-para">Affordable price for your kpop lightstick.</p>
+
+ 
+
+<div class="products-card row">
+
+<div class="col-lg-4">
+
+<div class="card" style="width: 18rem;">
+
+<img src="https://www.ubuy.com.ph/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNDF6dFFoQzVBcEwuX0FDX1NMMTAwMF8uanBn.jpg" alt="ls1">
+
+<div class="card-body">
+
+<h5 class="card-title">BTS Lightstick</h5>
+
+<p class="card-text">The BTS ARMY Bomb is the official light stick of the South Korean boy band BTS. It is a Bluetooth-enabled light stick that can be synchronized with the music at BTS concerts. The ARMY Bomb has a translucent, globe-shaped design and comes in a variety of colors, including blue, purple, and white. It also features seven different light modes, each representing one of the members of BTS. </p>
+
+</div>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">Price: $50</li>
+
+<li class="list-group-item">Rating: 5/5 star </li>
+
+</ul>
+
+<div class="card-body">
+
+<button class="btnCard">Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card" style="width: 18rem;">
+
+<img src="https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1557519805222-NHDZB1KN6KUPYZRM46AO/4940c607ffffd7e6cc5aabda061abe00.jpg?format=1500w" alt="ls2">
+
+<div class="card-body">
+
+<h5 class="card-title">Twice Lightstick</h5>
+
+<p class="card-text">The Twice Candy Bong Z is the official light stick of the South Korean girl group Twice. It is a Bluetooth-enabled light stick that can be synchronized with the music at Twice concerts. The Candy Bong Z has a translucent, candy-like design and comes in the colors apricot and neon magenta. It also features seven different light modes, each representing one of the members of Twice. </p>
+
+</div>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">Price: $45</li>
+
+<li class="list-group-item">Rating: 5/5 stars </li>
+
+</ul>
+
+<div class="card-body">
+
+<button class="btnCard">Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card" style="width: 18rem;">
+
+<img src="https://cf.shopee.ph/file/06337467f9de5b5a22a55b309b8adc73" alt="ls3">
+
+<div class="card-body">
+
+<h5 class="card-title">Seventeen Lightstick</h5>
+
+<p class="card-text">The Seventeen Carat Bong is the official light stick of the South Korean boy group Seventeen. It is a Bluetooth-enabled light stick that can be synchronized with the music at Seventeen concerts. The Carat Bong has a translucent, diamond-shaped design and comes in the colors pink and blue. It also features 10 different light modes, including a heartbeat mode, a breathing mode, and a wave mode. </p>
+
+</div>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">Price: $30</li>
+
+<li class="list-group-item">Rating: 5/5 stars</li>
+
+</ul>
+
+<div class="card-body">
+
+<button class="btnCard">Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+ 
+
+</section>
+
+ 
+
+<!-- Top Products -->
+
+ 
+
+<section id="products">
+
+<h3><span class = "products-title">Top</span>Products</h3>
+
+<p class = "products-para">Affordable price for your kpop lightstick..</p>
+
+ 
+
+<div class="products-card row">
+
+<div class="col-lg-4">
+
+<div class="card" style="width: 18rem;">
+
+<img src="https://cf.shopee.ph/file/e79ed9ce3ea09ffeed9624f367511dee" alt="mamamoo">
+
+<div class="card-body">
+
+<h5 class="card-title">Mamamoo Lightstick</h5>
+
+<p class="card-text">The Mamamoo light stick, also known as the MooMoo Bong, is the official light stick of the South Korean girl group Mamamoo. It is a radish-shaped light stick that is white and green, with a radish top. The light stick has 7 different light modes, each representing one of the members of Mamamoo. It also has a vibration mode that is designed for fans with hearing impairments. </p>
+
+</div>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">Price: $25</li>
+
+<li class="list-group-item">Rating: 5/5 stars </li>
+
+</ul>
+
+<div class="card-body">
+
+<button class="btnCard">Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card" style="width: 18rem;">
+
+<img src="https://ae01.alicdn.com/kf/Hc59017c91c4143f0aeeeeeff8b397547f.jpg" alt="redvelvet">
+
+<div class="card-body">
+
+<h5 class="card-title">Red Velvet Lightstick</h5>
+
+<p class="card-text">The Red Velvet light stick is the official light stick of the South Korean girl group Red Velvet. It is a cupcake-shaped light stick that is white and red. The light stick has 7 different light modes, each representing one of the members of Red Velvet. It also has a Bluetooth connectivity feature that allows the light stick to be synchronized with the music at Red Velvet concerts. </p>
+
+</div>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">Price: $35</li>
+
+<li class="list-group-item">Rating: 5/5 stars</li>
+
+</ul>
+
+<div class="card-body">
+
+<button class="btnCard">Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-4">
+
+<div class="card" style="width: 18rem;">
+
+<img src="https://i.pinimg.com/originals/50/49/d1/5049d1a6f8e994b5609f37160921c72d.jpg" alt="exo">
+
+<div class="card-body">
+
+<h5 class="card-title">EXO Lightstick</h5>
+
+<p class="card-text">The EXO light stick is the official light stick of the South Korean boy group EXO. It is a lightsaber-shaped light stick that is black and silver. The light stick has 10 different light modes, including a heartbeat mode, a breathing mode, and a wave mode. It also has a Bluetooth connectivity feature that allows the light stick to be synchronized with the music at EXO concerts. </p>
+
+</div>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">Price: $30</li>
+
+<li class="list-group-item">Rating: 5/5 stars </li>
+
+</ul>
+
+<div class="card-body">
+
+<button class="btnCard">Add to Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+ 
+
+</section>
+
+ 
+
+<!-- Testimonials -->
+
+ 
+
+<section id="testimonials">
+
+ 
+
+<div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+
+<h2>"K-pop is a global phenomenon that has captured the hearts of people all over the world."</h2>
+
+<img src="https://wallpapers.com/images/featured/utd6rlso6dvav5az.jpg" height="100" width="100" alt="bts">
+
+<em>BTS</em>
+
+</div>
+
+<div class="carousel-item">
+
+<h2 class="testimonial-text">"K-pop is a force for good in the world. It brings people together and inspires them to be the best versions of themselves." </h2>
+
+<img src="https://www.allkpop.com/upload/2020/11/content/051719/1604614795-image.png" height="100" width="150" alt="suju">
+
+<em>Super Junior</em>
+
+</div>
+
+</div>
+
+<a class="carousel-control-prev" href="#ctestimonial-carousel" role="button" data-slide="prev">
+
+<span class="carousel-control-prev-icon"></span>
+
+ 
+
+</a>
+
+<a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+
+<span class="carousel-control-next-icon"></span>
+
+ 
+
+</a>
+
+ 
+
+</div>
+
+</section>
+
+ 
+
+<section id = "press">
+
+<img class = "press-logo" src="https://staticg.sportskeeda.com/editor/2022/04/75bb8-16502068446536-1920.jpg?w=840" alt="kpop">
+
+<img class = "press-logo" src="https://media.glamourmagazine.co.uk/photos/634e790c9fdfff620ca792cd/1:1/w_1920,h_1920,c_limit/KPOP%20GROUP%20181022%20MAIN-SQ%20GettyImages-1412530273.jpg" alt="kpop2">
+
+<img class = "press-logo" src="https://w0.peakpx.com/wallpaper/94/588/HD-wallpaper-band-music-stray-kids-k-pop-boy-band.jpg" alt="kpop3">
+
+</section>
+
+ 
+
+<section id = "contact">
+
+<h3><span class = "contact-title">Leave</span>Messages</h3>
+
+<p class = "contact-para">If you have any query related to our service then leave Message.</p>
+
+<form>
+
+<div class = "form-content">
+
+<div class="form-group">
+
+<label for="exampleFormControlInput1">Full Name</label>
+
+<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+
+<label for="exampleFormControlInput1">Email address</label>
+
+<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+</div>
+
+<div class="form-group">
+
+<label for="exampleFormControlTextarea1">Leave Your Massage</label>
+
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+</div>
+</div>
+</form>
+</section>
+</body>
+<!-- Footer -->
+
+<footer id = "footer">
+
+<a class="footer-logo" href="#"><i class="fab fa-twitter fa-2x"></i></a>
+
+<a class="footer-logo" href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+
+<a class="footer-logo" href="#"><i class="fab fa-instagram fa-2x"></i></a>
+
+<a class="footer-logo" href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
+<p class = "footer-para">designed by Ven</p>
+
+<p>© Copyright 2023 VenCutie</p>
+
+</footer>
+</html>

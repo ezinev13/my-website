@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-position: center;
+    background-size: cover;
+    background-image: url(../imgs/bg6.png);
+}
+
+.container{
+    width: 1000px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-icon #Active {
+    color: #EE1C47;
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+/* HEADER */
+
+/* HEADER STICKY */
+header.sticky {
+    background-color: #FFFFFF;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+
+/*FOOTER*/
+footer{
+    width: 100%;
+    background: #000000;
+    color: #fff; 
+    padding: 2px; 
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+}
+
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+    text-align: center;
+}
+
+/* LOGO IMAGE */
+.logo img{
+    max-width: 190px;
+    height: auto;
+}
+
+.logo img:hover {
+    transition: all .42s ease;
+    transform: scale(1.1);
+    cursor: default;
+}
+/* LOGO IMAGE */
+
+/* NAVMENU BAR*/
+.navmenu {
+    display: flex;
+}
+
+/* NAVMENU lists*/
+.navmenu a{
+    color: #2c2c2c;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+.navmenu li {
+    list-style: none;
+}
+
+.navmenu li:hover {
+    transition: all .42s ease;
+    transform: scale(1.3);
+}
+
+.navmenu a:hover {
+    transition: all .42s ease;
+    color: rgb(38, 63, 133);
+}
+
+.navmenu li #Active {
+    color: #EE1C47;
+}
+/* NAVMENU ICONS*/
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    color: #2c2c2c;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.3);
+    color: rgb(38, 63, 133);
+}
+
+.nav-icon #Active{
+    color: #EE1C47;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #2c2c2c;
+    z-index: 10001;
+    cursor: pointer;
+}
+/* NAVMENU BAR END*/
+
+
+
+.shop{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 40px;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 150px;
+    
+}
+section .shopping{
+    position: relative;
+    text-align: right;
+}
+section .shopping img{
+    width: 35px;
+    cursor: pointer;
+}
+section .shopping span{
+    background: #2c2d2c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+    background-color: #FFF;
+}
+.list .item{
+    text-align: center;
+    background-color: #36d12b37;
+    padding: 20px;
+    box-shadow: 0 30px 30px #367d7dd7;
+    letter-spacing: 1px;
+}
+.list .item img{
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    background-color: #1C1F25;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+}
+.card{
+    position: fixed;
+    bottom: 0;
+    left: 100%;
+    width: 400px;
+    background-color: #5c5e5c;
+    height: 75vh;
+    transition: 0.5s;
+}
+.active .card{
+    left: calc(100% - 400px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+
+
+
+.card h1{
+    color: #e9e8e8;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+.card .checkOut div{
+    background-color: #87e9a4;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+
+
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    font-size: 14px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 85%;
+}
+.listCard li button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    color: white;
+    font-size: 22px;
+}
+.listCard .count{
+    margin: 0 10px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width:890px){
+    header{
+        padding: 2px 3%;
+        transition: .4s;
+    }
+    
+}
+
+@media (max-width:630px){
+    .main-text h1{
+        font-size: 50px;
+        transition: .4s;
+    }
+    .main-text p{
+        font-size: 18px;
+        transition: .4s;
+    }
+    .main-btn{
+        padding: 10px 20px;
+        transition: .4s;
+    }
+}
+
+@media (max-width:750px){
+    .navmenu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: fit-content;
+        background: #3f5d8a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 30px;
+        transition: all .42s;
+        background-color: #2c2c2c;
+        border-radius: 50px;
+    }
+    .navmenu a{
+        display: block;
+        margin: 18px 0;
+        color: white;
+    }
+    .navmenu a:hover{
+        display: block;
+        margin: 18px 0;
+        color: #ffc400;
+    }
+    .navmenu li{
+        color: white;
+    }
+    .navmenu.open {
+        right: 0;
+    }
+}
