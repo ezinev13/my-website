@@ -570,12 +570,55 @@ body {
     padding: 2rem;
   }
 
-  .skills-grid,
-  .portfolio-grid {
+  .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid.grid-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Make portfolio cards fit mobile screens for horizontal scrolling */
+  .portfolio-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .portfolio-grid {
+    gap: 1rem;
+    padding: 0 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1.5rem;
+  }
+
+  /* Make cards consistently thin in both scroll and grid views */
+  .project-card {
+    flex: 0 0 280px;
+    max-width: 280px;
+    margin: 0 auto;
+    scroll-snap-align: center;
+  }
+
+  /* Make images proportional to card width */
+  .project-image {
+    height: 180px;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  /* Hide scroll buttons on mobile */
+  .scroll-btn {
+    display: none;
   }
 }
