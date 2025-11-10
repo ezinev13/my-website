@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -90,7 +91,16 @@
         <h2 class="section-title">Portfolio</h2>
         <div class="section-line"></div>
       </div>
-      <div class="portfolio-grid">
+      <div class="portfolio-controls">
+        <button class="view-toggle" onclick="togglePortfolioView()">
+          <i class="fas fa-th-large"></i> View All Projects
+        </button>
+      </div>
+      <div class="portfolio-container">
+        <button class="scroll-btn scroll-left" aria-label="Scroll left">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="portfolio-grid">
         <!-- 1. EternalpEASE Website -->
         <div class="project-card">
           <div class="project-image">
@@ -227,6 +237,9 @@
             <a href="projects/crystal/crystal.html" class="project-link" target="_blank" rel="noopener noreferrer">View Project <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
+        <button class="scroll-btn scroll-right" aria-label="Scroll right">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
     </section>
 
