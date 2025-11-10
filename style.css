@@ -617,8 +617,22 @@ body {
     padding: 1.5rem;
   }
 
-  /* Hide scroll buttons on mobile */
+  /* Show and size scroll buttons on mobile so users can tap to move projects */
   .scroll-btn {
-    display: none;
+    display: flex;
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background: var(--purple-600);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   }
+
+  .scroll-left { left: 8px; }
+  .scroll-right { right: 8px; }
 }
