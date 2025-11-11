@@ -588,7 +588,7 @@ body::before {
 }
 
 .project-card:hover {
-  transform: translateY(-8px) rotateZ(0.5deg);
+  transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
   border-color: var(--purple-300);
 }
