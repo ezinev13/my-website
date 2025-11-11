@@ -936,6 +936,9 @@ body::before {
     padding: 3rem 1.5rem;
   }
 
+  /* Hide side decorations on mobile */
+  .side-decoration { display: none !important; }
+
   .side-decoration {
     width: 80px;
   }
