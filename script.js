@@ -24,18 +24,43 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Scroll buttons functionality
-    scrollLeftBtn.addEventListener('click', () => {
-        portfolioGrid.scrollBy({
-            left: -320,
-            behavior: 'smooth'
+    // Improved scroll buttons: center the previous/next project card
+    function getCards() {
+        return Array.from(portfolioGrid.querySelectorAll('.project-card'));
+    }
+
+    function getCenteredCardIndex() {
+        const cards = getCards();
+        const gridCenter = portfolioGrid.scrollLeft + portfolioGrid.clientWidth / 2;
+        let closestIndex = 0;
+        let closestDist = Infinity;
+        cards.forEach((card, i) => {
+            const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+            const dist = Math.abs(cardCenter - gridCenter);
+            if (dist < closestDist) {
+                closestDist = dist;
+                closestIndex = i;
+            }
         });
+        return closestIndex;
+    }
+
+    function centerCardAtIndex(index) {
+        const cards = getCards();
+        if (!cards.length) return;
+        const card = cards[Math.max(0, Math.min(index, cards.length -1))];
+        const target = card.offsetLeft - (portfolioGrid.clientWidth - card.offsetWidth) / 2;
+        portfolioGrid.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+    }
+
+    scrollLeftBtn.addEventListener('click', () => {
+        const current = getCenteredCardIndex();
+        centerCardAtIndex(current - 1);
     });
 
     scrollRightBtn.addEventListener('click', () => {
-        portfolioGrid.scrollBy({
-            left: 320,
-            behavior: 'smooth'
-        });
+        const current = getCenteredCardIndex();
+        centerCardAtIndex(current + 1);
     });
 
     // Show/hide scroll buttons based on scroll position
