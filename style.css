@@ -930,6 +930,19 @@ body::before {
   50% { transform: scale(1.2); }
 }
 
+/* Hide side accents on narrower desktop to avoid broken edges */
+@media (max-width: 1200px) {
+  .side-decoration.left,
+  .side-decoration.right {
+    display: none !important;
+  }
+}
+
+/* Optional: hide floating shapes as width shrinks to reduce clutter */
+@media (max-width: 992px) {
+  .floating-shapes { display: none !important; }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .container {
