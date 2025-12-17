@@ -113,4 +113,92 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.animationDelay = `${index * 0.1}s`;
         card.style.opacity = '0';
     });
+
+    // Add interactive effects for certifications
+    document.querySelectorAll('.cert-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            if (!e.target.closest('.btn')) {
+                const btn = this.querySelector('.btn');
+                if (btn) {
+                    btn.click();
+                }
+            }
+        });
+    });
+
+    // Add floating hearts effect when clicking on buttons
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            createHearts(e);
+        });
+    });
+
+    // Create floating hearts effect
+    function createHearts(e) {
+        const heartCount = 10;
+        const hearts = [];
+        
+        for (let i = 0; i < heartCount; i++) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💜';
+            heart.style.position = 'fixed';
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.pointerEvents = 'none';
+            heart.style.zIndex = '9999';
+            heart.style.opacity = '1';
+            heart.style.transition = 'all 0.5s ease';
+            
+            document.body.appendChild(heart);
+            hearts.push(heart);
+            
+            // Animate heart
+            setTimeout(() => {
+                const angle = Math.random() * Math.PI * 2;
+                const distance = 50 + Math.random() * 100;
+                const xOffset = Math.cos(angle) * distance;
+                const yOffset = Math.sin(angle) * distance - 50;
+                
+                heart.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                heart.style.opacity = '0';
+            }, 10);
+            
+            // Remove heart after animation
+            setTimeout(() => {
+                heart.remove();
+            }, 600);
+        }
+    }
+
+    // Add sparkle effect to profile image
+    const profileImage = document.querySelector('.profile-image');
+    if (profileImage) {
+        profileImage.addEventListener('click', function(e) {
+            createHearts(e);
+        });
+    }
+
+    // Add interactive effect to section titles
+    document.querySelectorAll('.section-title').forEach(title => {
+        title.addEventListener('click', function() {
+            // Find the associated section content
+            const section = this.closest('.section');
+            const content = section.querySelector('.certifications-grid') || 
+                           section.querySelector('.skills-grid') || 
+                           section.querySelector('.portfolio-grid') ||
+                           section.querySelector('.about-content') ||
+                           section.querySelector('.interests-list');
+                           
+            if (content) {
+                if (content.style.display === 'none') {
+                    content.style.display = 'grid';
+                    this.textContent = this.textContent.replace(' ▶', ' ▼');
+                } else {
+                    content.style.display = 'none';
+                    this.textContent = this.textContent.replace(' ▼', ' ▶');
+                }
+            }
+        });
+    });
 });
